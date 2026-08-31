@@ -585,22 +585,20 @@ Checklist:
 ### O que é uma referência em Python?
 
 ```text
-____________________________________________________
-____________________________________________________
+uma referência é um endereço de memória que aponta para onde um objeto real está guardado
 ```
 
 ### Qual a diferença entre `b = a` e `b = a.copy()`?
 
 ```text
-____________________________________________________
-____________________________________________________
+b = a cria uma nova referência para o mesmo objeto
+b = a.copy() cria um novo objeto com os mesmos valores (cópia rasa / shallow copy)
 ```
 
 ### Por que uma estrutura encadeada precisa de referências?
 
 ```text
-____________________________________________________
-____________________________________________________
+precisa de referências porque os seus elementos não estão guardados juntos na memória do computador
 ```
 
 ### Qual erro você encontrou durante a depuração?
@@ -613,8 +611,7 @@ ____________________________________________________
 ### Como referências ajudam a compreender estruturas dinâmicas?
 
 ```text
-____________________________________________________
-____________________________________________________
+elas transformam a memória do computador em um mapa de conexões lógicas, desvinculando a lógica dos dados da sua posição física
 ```
 
 ## 28. Síntese da aula
