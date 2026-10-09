@@ -188,6 +188,9 @@ O grafo não dirigido não se enquadra essa situação pois as ruas são de sent
 
 A professora apresentará dois grafos para comparação.
 
+<img width="611" height="171" alt="image" src="https://github.com/user-attachments/assets/c2163427-74aa-4fd5-8a5e-5310ab69e7ac" />
+
+
 ### Faça
 
 1.  Compare a quantidade de vértices.
@@ -202,10 +205,15 @@ A professora apresentará dois grafos para comparação.
 
   Vértice do grafo G   Vértice correspondente no grafo H
   -------------------- -----------------------------------
-                       
-                       
-                       
-                       
+  Vértice do grafo G   Vértice correspondente no grafo H
+  -------------------- -----------------------------------
+           (1,2)                  (a,c)
+           (2,3)                  (c,b)  
+           (3,4)                  (b,d)
+           (4,1)                  (d,a)
+
+> Não considere apenas a aparência dos desenhos. Grafos desenhados de
+> formas diferentes podem apresentar a mesma estrutura.      
 
 > Não considere apenas a aparência dos desenhos. Grafos desenhados de
 > formas diferentes podem apresentar a mesma estrutura.
