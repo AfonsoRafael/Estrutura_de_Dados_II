@@ -188,7 +188,8 @@ O grafo não dirigido não se enquadra essa situação pois as ruas são de sent
 
 A professora apresentará dois grafos para comparação.
 
-<img width="611" height="171" alt="image" src="https://github.com/user-attachments/assets/c2163427-74aa-4fd5-8a5e-5310ab69e7ac" />
+<img width="611" height="179" alt="image" src="https://github.com/user-attachments/assets/bef8d14a-73a1-489a-aef7-dceef47d2d45" />
+
 
 
 ### Faça
@@ -277,14 +278,21 @@ indicada pela professora.
 
 ### Registro
 
+<img width="242" height="289" alt="image" src="https://github.com/user-attachments/assets/e43225ba-b5e7-4501-bc9d-e97ad55f7f70" />
+
+
   Vértice     Grau
   --------- ------
-            
-            
-            
-            
+      A        6
+      B        4
+      C        4
+      D        3
+      E        3
+      F        2
+      G        1
+      H        1
 
-**Sequência final de graus:** `( ______________________________ )`
+**Sequência final de graus:** `( 1, 1, 2, 3, 3, 4, 4, 6)`
 
 ### Plataformas
 
