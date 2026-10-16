@@ -48,15 +48,15 @@ Conte quantas linhas chegam a cada círculo. Registre o resultado.
 
 | Usuário | Amigos diretos | Grau |
 |---|---|---:|
-| Ana | __________________ | ____ |
-| Bruno | __________________ | ____ |
-| Carla | __________________ | ____ |
-| Diego | __________________ | ____ |
-| Elisa | __________________ | ____ |
-| Felipe | __________________ | ____ |
+| Ana | Bruno - Carla | 2 |
+| Bruno | Ana - Carla - Diego | 3 |
+| Carla | Ana - Bruno - Elisa | 3 |
+| Diego | Bruno - Elisa - Felipe | 3 |
+| Elisa | Carla - Diego - Felipe | 3 |
+| Felipe | Diego - Elisa | 2 |
 
 **Pergunta 1:** quem tem mais conexões diretas?  
-Resposta: __________________________________________________
+Resposta: Bruno, Carla, Diego e Elisa
 
 ## 6. Passo a passo: calcule o número de amizades
 Some todos os graus. Como cada amizade conecta dois usuários, cada aresta é contada duas vezes.
@@ -64,9 +64,9 @@ Some todos os graus. Como cada amizade conecta dois usuários, cada aresta é co
 **Fórmula:**  
 `Número de arestas = soma dos graus ÷ 2`
 
-1. Soma dos graus: ______
-2. Divida por 2: ______ ÷ 2 = ______
-3. Quantas amizades existem no grafo? ______
+1. Soma dos graus: 16
+2. Divida por 2: 16 ÷ 2 = 8
+3. Quantas amizades existem no grafo? 8
 
 ## 7. Passo a passo: calcule a densidade
 A densidade compara as amizades existentes com o total de amizades possíveis.
@@ -81,13 +81,13 @@ Em que:
 - `V` = número de vértices.
 
 Substitua os valores:
-`D = 2 × ____ / (____ × (____ − 1))`
+`D = 2 × 8 / ( 6 × ( 6 − 1))`
 
-Resultado decimal: __________  
-Resultado percentual: __________ %
+Resultado decimal: 16/30 = 0,53  
+Resultado percentual: 53,3 %
 
 **Interprete:** a rede tem poucas ou muitas das conexões possíveis? Explique com suas palavras.
-
+R: Ao analisar a rede de amizades, podemos notar que ela possui mais da metade das conexões (com um porcentual de 53%). É uma rede moderadamente densa onde é bem conectada para um grupo pequeno (Tendo em vista que temos um máximo de 15 conexões possíveis entre 6 pessoas, onde pelo menos 8 conexões já são existentes).  
 ________________________________________________________________
 
 ## 8. Passo a passo: represente o grafo em Python
@@ -129,6 +129,9 @@ print(f"Densidade: {densidade:.2%}")
 4. `sum(...)` soma os graus.
 5. `// 2` divide a soma por dois para contar cada amizade uma única vez.
 6. A fórmula final calcula a densidade.
+
+Código:
+
 
 ## 9. Passo a passo: encontre um caminho
 Encontre um caminho de Ana até Felipe. Cada passagem por uma linha corresponde a uma aresta.
