@@ -41,6 +41,9 @@ As amizades são:
 4. Não desenhe duas linhas para a mesma amizade.
 5. Confira se todas as oito amizades aparecem.
 
+   <img width="756" height="353" alt="image" src="https://github.com/user-attachments/assets/a241a95f-e2f3-45f6-a247-d406896ad56f" />
+
+
 **Espaço para o seu desenho:** faça o grafo no caderno ou em uma ferramenta de desenho.
 
 ## 5. Passo a passo: calcule o grau
@@ -132,15 +135,16 @@ print(f"Densidade: {densidade:.2%}")
 
 Código:
 
+link : https://colab.research.google.com/drive/1nPUqzW-AyDs1SVcCnaH7x9ihLCoBgT5D?usp=sharing
 
 ## 9. Passo a passo: encontre um caminho
 Encontre um caminho de Ana até Felipe. Cada passagem por uma linha corresponde a uma aresta.
 
 Exemplo de registro:
-`Ana → __________ → __________ → Felipe`
+`Ana → Bruno → Diego → Felipe`
 
-- Quantas arestas há no caminho? ______
-- Você encontrou outro caminho com a mesma quantidade de arestas? Qual?
+- Quantas arestas há no caminho? 3
+- Você encontrou outro caminho com a mesma quantidade de arestas? Qual? Sim, Ana → Carla → Elisa → Felipe
 
 ________________________________________________________________
 
@@ -153,6 +157,9 @@ Amplie a rede social:
 5. Compare a densidade antes e depois da ampliação.
 6. Identifique os usuários com mais conexões.
 7. Explique como a rede poderia recomendar uma nova amizade.
+
+   <img width="966" height="405" alt="image" src="https://github.com/user-attachments/assets/229a42d4-67f1-4c8e-9452-aa67ae18bdbb" />
+
 
 ## 11. Entrega
 Entregue:
