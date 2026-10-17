@@ -133,6 +133,7 @@ print(f"Densidade: {densidade:.2%}")
 5. `// 2` divide a soma por dois para contar cada amizade uma única vez.
 6. A fórmula final calcula a densidade.
 
+
 Código:
 
 link : https://colab.research.google.com/drive/1nPUqzW-AyDs1SVcCnaH7x9ihLCoBgT5D?usp=sharing
@@ -152,14 +153,84 @@ ________________________________________________________________
 Amplie a rede social:
 1. Adicione pelo menos quatro usuários fictícios.
 2. Crie no mínimo cinco novas amizades.
+
+  <img width="966" height="405" alt="image" src="https://github.com/user-attachments/assets/229a42d4-67f1-4c8e-9452-aa67ae18bdbb" />
+
 3. Atualize a lista de adjacência no Python.
+
+  # Lista de adjacência atualizada com 10 usuários e 14 amizades
+
+```python
+rede_ampliada = {
+  "Ana": ["Bruno", "Carla"],
+  "Bruno": ["Ana", "Carla", "Diego", "Gabriel"],
+  "Carla": ["Ana", "Bruno", "Elisa", "Gabriel"],
+  "Diego": ["Bruno", "Elisa", "Felipe"],
+  "Elisa": ["Carla", "Diego", "Felipe", "Igor"],
+  "Felipe": ["Diego", "Elisa", "Helena"],
+  "Gabriel": ["Bruno", "Carla", "Julia"],
+  "Helena": ["Felipe", "Igor"],
+  "Igor": ["Elisa", "Helena"],
+  "Julia": ["Gabriel"]
+}
+# Quantidade de usuários (V)
+n = len(rede_ampliada)
+print("=== GRAU DE CADA USUÁRIO (REDE AMPLIADA) ===")
+for usuario, amigos in rede_ampliada.items():
+
+  print(f"{usuario}: {len(amigos)} conexões -> {amigos}")
+# Cálculo de arestas (E)
+soma_graus = sum(len(amigos) for amigos in rede_ampliada.values())
+arestas = soma_graus // 2
+# Cálculo de densidade (D)
+densidade = (2 * arestas) / (n * (n - 1))
+print("\n=== RESUMO MÉTRICO ===")
+print(f"Soma dos graus: {soma_graus}")
+print(f"Total de usuários (V): {n}")
+print(f"Total de amizades (E): {arestas}")
+print(f"Densidade da rede: {densidade:.4f} ({densidade:.2%})")
+# Identificando os usuários mais conectados
+
+maior_grau = max(len(amigos) for amigos in rede_ampliada.values())
+
+mais_conectados = [u for u, a in rede_ampliada.items() if len(a) == maior_grau]
+
+print(f"Usuários mais conectados (Grau {maior_grau}): {', '.join(mais_conectados)}")
+```
+   
 4. Recalcule os graus, o total de arestas e a densidade.
+
+1. Soma dos graus: 28
+2. Divida por 2: 28 ÷ 2 = 14
+3. Quantas amizades existem no grafo? 14
+
+   ## Densidade
+`D = 2 × 14 / ( 10 × ( 10 − 1))`
+
+Resultado decimal: 28/90 = 0,31  
+Resultado percentual: 31,11 %
+
 5. Compare a densidade antes e depois da ampliação.
+| Usuário | Amigos diretos | Grau |
+|---|---|---:|
+| Ana | Bruno - Carla | 2 |
+| Bruno | Ana - Carla - Diego - Gabriel | 4 |
+| Carla | Ana - Bruno - Elisa - Gabriel | 4 |
+| Diego | Bruno - Elisa - Felipe | 3 |
+| Elisa | Carla - Diego - Felipe - Igor | 4 |
+| Felipe | Diego - Elisa - Helena | 3 |
+| Gabriel | Bruno - Carla - Julia | 3 |
+| Helena | Felipe - Igor | 2 |
+| Igor | Elisa - Helena | 2 |
+| Julia | Gabriel | 1 |
+
 6. Identifique os usuários com mais conexões.
+Os usuários com mais conexão são Bruno, Carla e Elisa
+
+
 7. Explique como a rede poderia recomendar uma nova amizade.
 
-   <img width="966" height="405" alt="image" src="https://github.com/user-attachments/assets/229a42d4-67f1-4c8e-9452-aa67ae18bdbb" />
-
+Se duas pessoas não são amigas, mas têm três amigos em comum, é provável que se conheçam. A rede pode usar essa informação para sugerir a amizade, mostrando quem são os amigos em comum.
 
 ## 11. Entrega
 Entregue:
@@ -171,3 +242,6 @@ Entregue:
 
 ## 12. Pergunta de reflexão
 Duas pessoas ainda não são amigas, mas têm três amigos em comum. Como essa informação poderia ser usada para sugerir uma nova conexão? Quais cuidados de privacidade devem ser considerados ao analisar redes sociais?
+
+Se duas pessoas não são amigas, mas têm três amigos em comum, é provável que se conheçam. A rede pode usar essa informação para sugerir a amizade, mostrando quem são os amigos em comum.
+Sobre privacidade, o cuidado principal é que a pessoa saiba que seus dados são usados e possa escolher se quer isso. Também é preciso evitar que a sugestão exponha vínculos que alguém prefere manter em sigilo. 
