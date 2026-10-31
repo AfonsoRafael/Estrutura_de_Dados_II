@@ -2,6 +2,7 @@
 
 **Disciplina:** Estrutura de Dados II — Ciência da Computação
 **Estudo de caso:** pane relacionada ao GPS e impactos em voos no Aeroporto de Brasília (G1, 22 set. 2026)
+
 **Nome:** Afonso Rafael Evangelista da Silva
 
 > **Aviso:** esta é uma simulação computacional didática. As cidades são reais, mas as conexões e os bloqueios são **fictícios**. O resultado não representa rotas aéreas e não pode orientar um voo real.
