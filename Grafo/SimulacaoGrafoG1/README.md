@@ -21,7 +21,8 @@ Quando um recurso de navegação fica indisponível, a operação precisa ser re
 - **Tamanho:** 11 vértices e 15 arestas.
 - **Representação:** lista de adjacência (`dict` de listas), gerada a partir de uma lista de arestas pela função `construir_grafo`. Isso garante que toda aresta apareça nas listas dos dois extremos.
 
-![Diagrama do grafo](diagrama_grafo.png)
+<img width="977" height="845" alt="image" src="https://github.com/user-attachments/assets/68fd2cae-09a3-4714-bf9a-a41c5404f90f" />
+
 
 | Vértice | Vizinhos |
 |---|---|
