@@ -1,0 +1,30 @@
+Rede simulada (fictícia) — aeroportos disponíveis (sigla ou cidade):
+  BSB – Brasília (Aeroporto Internacional de Brasília): GYN, CNF, CGB, SSA
+  CGB – Cuiabá (Aeroporto Marechal Rondon): BSB, POA
+  CNF – Belo Horizonte (Aeroporto Internacional de Confins): BSB, VCP, GIG, GRU
+  CWB – Curitiba (Aeroporto Internacional Afonso Pena): GRU, FLN
+  FLN – Florianópolis (Aeroporto Internacional Hercílio Luz): POA, CWB
+  GIG – Rio de Janeiro (Aeroporto Internacional do Galeão): CNF, GRU
+  GRU – São Paulo (Aeroporto Internacional de Guarulhos): CNF, VCP, GIG, CWB
+  GYN – Goiânia (Aeroporto Santa Genoveva): BSB, VCP, POA
+  POA – Porto Alegre (Aeroporto Internacional Salgado Filho): GYN, CGB, FLN
+  SSA – Salvador (Aeroporto Internacional de Salvador): BSB
+  VCP – Campinas (Aeroporto Internacional de Viracopos): GYN, CNF, GRU
+
+Origem: Destino:   'MAO' não existe na rede. Opções: BSB, CGB, CNF, CWB, FLN, GIG, GRU, GYN, POA, SSA, VCP
+Destino: 
+=== Cenário normal ===
+BFS: BSB -> CNF -> GRU -> CWB  [3 arestas]
+DFS: BSB -> GYN -> VCP -> CNF -> GIG -> GRU -> CWB  [6 arestas]
+-> DFS usou 3 aresta(s) a mais que o BFS.
+
+Bloqueie conexões (formato: SIGLA A - SIGLA B, ex.: CNF - GRU). Enter vazio para encerrar.
+Bloquear:   Conexão CNF–GRU será bloqueada na simulação.
+Bloquear:   Não existe conexão direta entre BSB e CWB.
+Bloquear: 
+=== Cenário com bloqueio: CNF–GRU ===
+BFS: BSB -> GYN -> VCP -> GRU -> CWB  [4 arestas]
+DFS: BSB -> GYN -> VCP -> CNF -> GIG -> GRU -> CWB  [6 arestas]
+-> DFS usou 2 aresta(s) a mais que o BFS.
+
+(A rede original permanece intacta.)

@@ -1,0 +1,46 @@
+Rede: 11 vértices, 15 arestas (não dirigida)
+  [OK] lista de adjacência simétrica (toda aresta nos dois sentidos)
+
+=== A) Rede completa ===
+BFS: BSB -> CNF -> GRU -> CWB  [3 arestas]
+DFS: BSB -> GYN -> VCP -> CNF -> GIG -> GRU -> CWB  [6 arestas]
+-> DFS usou 3 aresta(s) a mais que o BFS.
+  [OK] BFS encontra o mínimo de 3 arestas
+  [OK] caminhos usam apenas arestas existentes
+
+=== B) Bloqueio CNF–GRU ===
+BFS: BSB -> GYN -> VCP -> GRU -> CWB  [4 arestas]
+DFS: BSB -> GYN -> VCP -> CNF -> GIG -> GRU -> CWB  [6 arestas]
+-> DFS usou 2 aresta(s) a mais que o BFS.
+  [OK] desvio exige 4 arestas (+1)
+  [OK] rede original NÃO foi alterada
+
+=== C1) Bloqueios CNF–GRU e GRU–CWB ===
+BFS: BSB -> GYN -> POA -> FLN -> CWB  [4 arestas]
+DFS: BSB -> GYN -> POA -> FLN -> CWB  [4 arestas]
+  [OK] ainda há caminho, pelo corredor Sul (POA e FLN)
+
+=== C2) Bloqueios CNF–GRU, GRU–CWB e FLN–CWB ===
+BFS: nenhum caminho encontrado (destino inalcançável)
+DFS: nenhum caminho encontrado (destino inalcançável)
+  [OK] sem caminho: CWB ficou sem arestas (grafo desconexo)
+
+=== Extra) Bloqueio da ponte BSB–SSA ===
+BFS: nenhum caminho encontrado (destino inalcançável)
+DFS: nenhum caminho encontrado (destino inalcançável)
+  [OK] remover uma ponte desconecta o vértice folha (SSA)
+
+=== D) Mesma rede, vizinhos de BSB reordenados (CGB primeiro) ===
+BFS: BSB -> CNF -> GRU -> CWB  [3 arestas]
+DFS: BSB -> CGB -> POA -> GYN -> VCP -> CNF -> GIG -> GRU -> CWB  [8 arestas]
+-> DFS usou 5 aresta(s) a mais que o BFS.
+  [OK] DFS muda de caminho só pela ordem dos vizinhos
+  [OK] BFS mantém o mesmo número mínimo de arestas
+
+=== Casos-limite ===
+  [OK] origem = destino retorna [origem] (0 arestas)
+  [OK] entrada por sigla ou cidade, sem acento/maiúsculas, é aceita
+  [OK] aeroporto inexistente é rejeitado
+  [OK] busca para vértice ausente retorna None sem erro
+
+Resultado: TODOS OS TESTES PASSARAM
