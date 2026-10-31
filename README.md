@@ -1,6 +1,7 @@
 # Estruturas de Dados II
 ## Nome: Afonso Rafael Evangelista da Silva
 
+
 Repositório destinado aos estudos, exercícios, atividades práticas e projetos desenvolvidos durante a disciplina de **Estruturas de Dados II**, do curso de Ciência da Computação.
 
 A disciplina dá continuidade aos conceitos de estruturas de dados estudados anteriormente, avançando principalmente para estruturas de dados não lineares, com foco em grafos, árvores e algoritmos de busca.
