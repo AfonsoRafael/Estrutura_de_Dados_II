@@ -1,4 +1,5 @@
 # Estruturas de Dados II
+## Nome: Afonso Rafael Evangelista da Silva
 
 Repositório destinado aos estudos, exercícios, atividades práticas e projetos desenvolvidos durante a disciplina de **Estruturas de Dados II**, do curso de Ciência da Computação.
 
